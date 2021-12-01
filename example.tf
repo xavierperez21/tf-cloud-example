@@ -109,4 +109,8 @@ resource "aws_instance" "dev" {
   subnet_id     = aws_subnet.my_subnet.id
   associate_public_ip_address = true
   security_groups             = [aws_security_group.dynamic-sg.id]
+
+  tags = {
+    Name = "lxpm-instance"
+  }
 }
